@@ -9,7 +9,7 @@ plugins {
 
 kotlin {
     androidTarget()
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -37,12 +37,13 @@ kotlin {
 
             api("com.rickclephas.kmm:kmm-viewmodel-core:1.0.0-ALPHA-16")
             api("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
-            api("me.nathanfallet.usecases:usecases:1.5.5")
+            api("me.nathanfallet.usecases:usecases:1.5.6")
         }
         val androidUnitTest by getting {
             dependencies {
                 implementation(kotlin("test"))
                 implementation("io.mockk:mockk:1.13.8")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion")
             }
         }
     }
